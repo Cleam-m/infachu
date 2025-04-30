@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Информатика</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+<body> 
+    <div class="advertisement" id="advertisement">
+        <div class="advertisement-content">
+            <span class="close-btn" onclick="closeAd()">×</span>
+            <p>Здесь может быть ваша реклама!</p>
+        </div>
+    </div>
+    <div class="main-header slide-in" id="mainHeader">
+            <img class="logo" src="logo.png" alt="Логотип">
+</div>
+    <div class="secondary-menu slide-in" id="secondaryMenu">
+        <div class="nav-links">
+            <div class="main-items">
+                <a href="#">Знакомство с SQL</a>
+                <a href="#raz">Разработчики sql</a>
+                <a href="#comma">Команды SQL</a>
+                <a href="#opr">Карточный опрос</a>
+            </div>
+            <div class="main-item">
+                <a href="#bottom">Контакты и отзыв</a>
+            </div>
+        </div>
+    </div>
+    <div class="sql-info">
+        <h1 style="text-align: center;">Что такое SQL: как устроен, зачем нужен и как с ним работать</h1>
+        <div class="sql-content">
+            <p>
+                Вся информация, с которой вы сталкиваетесь в интернете, содержится в базах данных. В них же хранятся данные о сотрудниках и клиентах крупных компаний, научных и социологических исследованиях, расписании рейсов ближайшего к вам аэропорта и многое другое.
+                <br><br>
+                Работать с этими массивами данных вручную было бы долго и неудобно. Поэтому придумали SQL — специальный язык для общения с базами данных.
+            </p>
+            <img src="4299956.png" alt="Иллюстрация SQL" class="sql-image">
+        </div>
+    </div>
+    <h2 id="raz" class="section-title">Разработчики SQL</h2>
+
+    <div style="height: 750px; background: linear-gradient(rgba(218, 217, 217, 0.4), rgba(151, 151, 151, 0.1)); margin-left: 7%; margin-right: 7%; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="height: 350px; background: linear-gradient(rgba(109, 109, 109, 0.4), rgba(99, 98, 98, 0.1)); position: relative; display: flex; align-items: center;">
+
+            <div style="width: 250px; height: 100%; background-color: rgb(219, 219, 219); position: absolute;">
+                <img src="Don_Chamberlin_(cropped).jpg" alt="Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            </div>
+            <div style="flex: 1; font-family: Arial, sans-serif; font-size: 20px; color: #000000; line-height: 1.8; margin-left: 270px; padding-right: 20px; margin-top: -110px;">
+                <h2 style="text-align: center; margin-bottom: 10px;">Дональд Чемберлин</h2>
+                <p>
+                    Американский ученый-компьютерщик, один из главных разработчиков оригинальной спецификации языка SQL вместе с Рэймондом Бойсом. Он также внес значительный вклад в разработку XQuery. В 1997 году Чемберлин был избран членом Национальной инженерной академии за вклад в язык запросов к базам данных SQL.
+                </p>
+            </div>
+        </div>
+
+        <div style="height: 350px; background: linear-gradient(rgba(85, 85, 85, 0.4), rgba(109, 109, 109, 0.1)); position: relative; display: flex; align-items: center;">
+            <div style="flex: 1; font-family: Arial, sans-serif; font-size: 20px; color: #000000; line-height: 1.8; margin-right: 270px; padding-left: 20px; margin-top: -80px;">
+                <h2 style="text-align: center; margin-bottom: 10px;">Раймонд Бойс</h2>
+                <p id="comma" >
+                    Американский информатик, Бойс вырос в Нью-Йорке, поступил в колледж в Провиденсе. В июне 1972 года получил степень доктора философии в Университете Пердью. После ухода из Пердью работал над проектами в области баз данных для корпорации IBM в Йорктаун Хейтс. Во время работы в IBM вместе с Эдгаром Коддом разработал нормальную форму Бойса — Кодда. Будучи главой группы разработки в области реляционных баз данных, в сотрудничестве с Дональдом Чемберленом разработал язык SQL.
+                </p>
+            </div>
+            <div style="width: 250px; height: 100%; background-color: rgb(211, 211, 211); position: absolute; right: 0;">
+                <img src="Raymond_F_Boyce_age_25.png" alt="Raymond Boyce" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+            </div>
+        </div>
+    </div>
+<section class="sql-commands-section">
+    <h2 class="section-title">Основные команды SQL</h2>
+    <div class="sql-commands-wrapper">
+        <div class="sql-command">
+            <h3>SELECT</h3>
+            <p>
+                Команда SELECT используется для извлечения данных из базы данных. Это основная команда для работы с данными в таблицах.
+            </p>
+            <pre><code>SELECT * FROM table_name;</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>INSERT</h3>
+            <p>
+                Команда INSERT используется для добавления новых записей в таблицу базы данных.
+            </p>
+            <pre><code>INSERT INTO table_name (column1, column2) VALUES (value1, value2);</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>UPDATE</h3>
+            <p>
+                Команда UPDATE используется для изменения существующих записей в таблице базы данных.
+            </p>
+            <pre><code>UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>DELETE</h3>
+            <p>
+                Команда DELETE используется для удаления записей из таблицы базы данных.
+            </p>
+            <pre><code>DELETE FROM table_name WHERE condition;</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>WHERE</h3>
+            <p>
+                Команда WHERE используется для указания условий фильтрации данных. Она часто применяется вместе с другими командами, такими как SELECT, UPDATE и DELETE.
+            </p>
+            <pre><code>SELECT column1, column2 FROM table_name WHERE condition;</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>JOIN</h3>
+            <p>
+                Команда JOIN используется для объединения данных из нескольких таблиц на основе связанных столбцов.
+            </p>
+            <pre><code>SELECT column1, column2 FROM table1 JOIN table2 ON table1.column = table2.column;</code></pre>
+        </div>
+
+        <div id="dop" class="sql-command">
+            <h3>GROUP BY</h3>
+            <p>
+                Команда GROUP BY используется для группировки записей, которые имеют одинаковые значения в одном или нескольких столбцах.
+            </p>
+            <pre><code>SELECT column, COUNT(*) FROM table_name GROUP BY column;</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>ORDER BY</h3>
+            <p>
+                Команда ORDER BY используется для сортировки результатов выборки по одному или нескольким столбцам.
+            </p>
+            <pre><code>SELECT column1, column2 FROM table_name ORDER BY column1 ASC;</code></pre>
+        </div>
+
+        <div class="sql-command">
+            <h3>LIMIT</h3>
+            <p>
+                Команда LIMIT ограничивает количество строк, которые возвращаются в результате запроса.
+            </p>
+            <pre><code id="opr">SELECT column1, column2 FROM table_name LIMIT 10;</code></pre>
+        </div>
+    </div>
+</section>
+<h2 class="section-title">Дополнительные ссылки на ресурсы</h2>
+<section class="navigation-section">
+    <div class="links-container">
+      <a href="https://www.w3schools.com/sql/" class="link-item">Перейти к более подробной информации</a>
+      <a href="https://onecompiler.com/sqlserver" class="link-item" target="_blank">Перейти в онлайн-компилятор SQL</a>
+    </div>
+  </section>
+<section class="flashcards-section">
+    <h2 class="section-title">Карточный опрос по знаниям SQL
+        
+    </h2>
+    <div class="flashcard-wrapper">
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img src="card1.png" alt="SQL">
+                    <h2>Что такое SQL?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Язык запросов к базе данных</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img src="Снимок экрана 2025-04-30 182058.png" alt="SELECT">
+                    <h2>Что делает <span class="orange">SELECT</span>?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Выбирает данные из таблицы</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img src="Снимок экрана 2025-04-30 181838.png" alt="INSERT">
+                    <h2>Что делает <span class="orange">INSERT</span>?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Добавляет данные</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img src="Снимок экрана 2025-04-30 182024.png" alt="UPDATE">
+                    <h2>Что делает <span class="orange">UPDATE</span>?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Обновляет данные в таблице</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img src="Снимок экрана 2025-04-30 182957.png" alt="DELETE">
+                    <h2>Что делает <span class="orange">DELETE</span>?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Удаляет данные из таблицы</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <img src="Снимок экрана 2025-04-30 183011.png" alt="WHERE">
+                    <h2>Что делает <span class="orange">WHERE</span>?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Ограничивает выборку данных</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h2>Как выбрать столбцы name и age из таблицы students?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2><span class="orange">SELECT</span> name, age <span class="orange">FROM</span> students;</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h2>Информация о студентах записана в таблицу students. Как выбрать только тех студентов, чей возраст больше 18?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2><span class="orange">SELECT</span> * <span class="orange">FROM</span> students<br>
+                        <span class="orange">WHERE</span> age > 18;
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h2>Что такое агрегатные функции?</h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2>Функции для выполнения операций на группах данных (например, <span class="orange">SUM</span>, <span class="orange">COUNT</span>)</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h2>
+                        Информация о студентах записана в таблицу students. Как отсортировать возраст студентов (поле age) по возрастанию?
+                    </h2>
+                </div>
+                <div class="flashcard-back">
+                    <h2><span class="orange">SELECT</span> * <span class="orange">FROM</span> students<br>
+                        <span class="orange">ORDER BY</span> age <span class="orange">ASC</span>;
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Счётчик карточек -->
+    <div class="flashcard-counter">
+        <span id="cardCounter">1</span> из <span id="totalCards">6</span> карточек
+    </div>
+
+    <div class="flashcard-controls">
+        <button onclick="prevCard()">Предыдущая</button>
+        <button onclick="nextCard()">Следующая</button>
+    </div>
+</section>
+<section class="reviews-section">
+    <h2 class="section-title">Отзывы</h2>
+    <form id="review-form">
+      <input type="text" id="name" placeholder="Ваше имя" required />
+      <textarea id="comment" placeholder="Ваш отзыв..." required></textarea>
+      <button type="submit">Отправить отзыв</button>
+    </form>
+    <div id="reviews-container"></div>
+  </section>
+  
+  
+<footer id="bottom">
+    <div class="footer-content">
+        <p>&copy; 2025 Инфочу. Все права защищены.</p>
+        <p>Контактный номер: <a href="tel:+77750276155">+7 (775) 027-61 55</a></p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+<script> 
+function closeAd() {
+    document.getElementById("advertisement").style.display = "none";
+
+    const mainHeader = document.getElementById("mainHeader");
+    const secondaryMenu = document.getElementById("secondaryMenu");
+    mainHeader.classList.add("move-up-main");
+            secondaryMenu.classList.add("move-up-secondary");
+        }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let currentCard = 0;
+    const cards = document.querySelectorAll('.flashcard');
+    const prevBtn = document.querySelector('.flashcard-controls button:first-child');
+    const nextBtn = document.querySelector('.flashcard-controls button:last-child');
+    const cardCounter = document.getElementById('cardCounter');
+    const totalCards = document.getElementById('totalCards');
+
+    totalCards.textContent = cards.length;
+
+    function updateCards() {
+        cards.forEach((card, index) => {
+            card.classList.remove('active', 'inactive');
+            if (index === currentCard) {
+                card.classList.add('active');
+            } else if (index < currentCard) {
+                card.classList.add('inactive');
+            }
+        });
+        prevBtn.disabled = currentCard === 0;
+        nextBtn.disabled = currentCard === cards.length - 1;
+        cardCounter.textContent = currentCard + 1;
+    }
+
+    window.prevCard = function () {
+        if (currentCard > 0) {
+            currentCard--;
+            updateCards();
+        }
+    };
+
+    window.nextCard = function () {
+        if (currentCard < cards.length - 1) {
+            currentCard++;
+            updateCards();
+        }
+    };
+
+    window.flipCard = function (cardElement) {
+        cardElement.classList.toggle('flipped');
+    };
+
+    updateCards();
+});
+  const form = document.getElementById('review-form');
+  const nameInput = document.getElementById('name');
+  const commentInput = document.getElementById('comment');
+  const container = document.getElementById('reviews-container');
+
+  function loadReviews() {
+    container.innerHTML = '';
+    const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+    reviews.forEach((r, index) => {
+      const div = document.createElement('div');
+      div.className = 'review-card';
+      div.innerHTML = `
+        <div>
+          <h4>${r.name}</h4>
+          <p>${r.comment}</p>
+        </div>
+        <button class="delete-btn" data-index="${index}">Удалить</button>
+      `;
+      container.appendChild(div);
+    });
+    const deleteButtons = container.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const index = e.target.getAttribute('data-index');
+        deleteReview(index);
+      });
+    });
+  }
+
+  function deleteReview(index) {
+    const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+    reviews.splice(index, 1);
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    loadReviews();
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = nameInput.value.trim();
+    const comment = commentInput.value.trim();
+    if (!name || !comment) return;
+
+    const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+    reviews.unshift({ name, comment });
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+
+    nameInput.value = '';
+    commentInput.value = '';
+    loadReviews();
+  });
+
+  window.addEventListener('DOMContentLoaded', loadReviews);
+</script>
+
+</body>
+</html>
