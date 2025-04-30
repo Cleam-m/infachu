@@ -42,7 +42,12 @@ body {
     width: auto;
     align-items: center;
 }
-
+.logos {
+    height: 62px;
+    width: auto;
+    align-items: center;
+    margin-right: 250px;
+}
 .main-nav {
     display: flex;
     gap: 20px;
